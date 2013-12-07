@@ -1,0 +1,32 @@
+body {
+	text-align: center;
+}
+
+div#container {
+	width: 600px;
+	margin: 20px auto;
+	background: #ddd;
+	padding: 10px;
+}
+
+form ul {
+	overflow: hidden;
+	padding: 0;
+}
+
+form li {
+	float: left;
+	display: inline-block;
+	width: 50%;
+	margin: 10px 0;
+}
+
+form li input {
+	width: 250px;
+}
+
+div.success {
+	width: 600px;
+	height: 200px;
+	background: #fff url(../images/loader.gif) no-repeat center;
+}
