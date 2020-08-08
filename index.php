@@ -16,20 +16,20 @@
 
 			$("#submit").click(function() {
 
-				var address1 = $("#address1").val();
-				var address2 = $("#address2").val();
-				var web = $("#web").val();
-				var title = $("#title").val();
-				var name = $("#name").val();
-				var surname = $("#surname").val();
-				var phone = $("#phone").val();
-				var extension = $("#extension").val();
-				var fax = $("#fax").val();
-				var email = $("#email").val();
+				var address1 = encodeURIComponent($("#address1").val());
+				var address2 = encodeURIComponent($("#address2").val());
+				var web = encodeURIComponent($("#web").val());
+				var title = encodeURIComponent($("#title").val());
+				var name = encodeURIComponent($("#name").val());
+				var surname = encodeURIComponent($("#surname").val());
+				var phone = encodeURIComponent($("#phone").val());
+				var extension = encodeURIComponent($("#extension").val());
+				var desk = encodeURIComponent($("#desk").val());
+				var email = encodeURIComponent($("#email").val());
 
-				var dataString = 'address1=' + address1 + '&address2=' + address2 + '&web=' + web + '&title=' + title + '&name=' + name + '&surname=' + surname + '&phone=' + phone + '&extension=' + extension + '&fax=' + fax + '&email=' + email + '&submit=submit';
+				var dataString = 'address1=' + address1 + '&address2=' + address2 + '&web=' + web + '&title=' + title + '&name=' + name + '&surname=' + surname + '&phone=' + phone + '&extension=' + extension + '&desk=' + desk + '&email=' + email + '&submit=submit';
 
-				if(address1=='' || address2=='' || web=='' || title=='' || name=='' || surname=='' || phone=='' || extension=='' || fax=='' || email=='') {
+				if(address1=='' || address2=='' || web=='' || title=='' || name=='' || surname=='' || email=='') {
 
 					$('.success').fadeOut(200).hide();
 					$('.error').fadeOut(200).show();
@@ -65,59 +65,59 @@
 
 				<div class="info">
 
-					<h2>Your title goes here..</h2>
-					<span>Write a description here..</span>
+					<h2>MDCPS - Email Signature Generator</h2>
+					<span>Fill in the info below to generate your email signature.</span>
 
 				</div>
 
 				<ul>
 
 					<li>
-						<label>Address Line 1</label>
+						<label>District</label>
 						<div>
-							<input id="address1" name="address1" type="text" value="" tabindex="1" />
+							<input id="address1" name="address1" type="text" value="Miami-Dade County Public Schools" tabindex="1" />
 						</div>
 					</li>
 					
 					<li>
-						<label>Address Line 2</label>
+						<label>Department</label>
 						<div>
-							<input id="address2" name="address2" type="text" value="" tabindex="2" />
+							<input id="address2" name="address2" type="text" value="Information Technology Services" tabindex="2" />
 						</div>
 					</li>
 
 					<li>
 						<label>Website</label>
 						<div>
-							<input id="web" name="web" type="text" value="" tabindex="3" />
+							<input id="web" name="web" type="text" value="www.dadeschools.net" tabindex="3" />
 						</div>
 					</li>
 
 					<li>
 						<label>Title</label>
 						<div>
-							<input id="title" name="title" type="text" value="" tabindex="4" />
+							<input id="title" name="title" type="text" value="Network Infrastructure & System Support" tabindex="4" />
 						</div>
 					</li>
 					
 					<li>
-						<label>Name</label>
+						<label>First Name</label>
 						<div>
-							<input id="name" name="name" type="text" value="" tabindex="5" />
+							<input id="name" name="name" type="text" value="Michael A." tabindex="5" />
 						</div>
 					</li>
 
 					<li>
-						<label>Surname</label>
+						<label>Last Name</label>
 						<div>
-							<input id="surname" name="surname" type="text" value="" tabindex="6" />
+							<input id="surname" name="surname" type="text" value="Muni" tabindex="6" />
 						</div>
 					</li>
 
 					<li>
-						<label>Phone</label>
+						<label>Desk Phone</label>
 						<div>
-							<input id="phone" name="phone" type="text" value="" tabindex="7" />
+							<input id="desk" name="desk" type="text" value="" tabindex="9" />
 						</div>
 					</li>
 					
@@ -127,18 +127,17 @@
 							<input id="extension" name="extension" type="text" value="" tabindex="8" />
 						</div>
 					</li>
-
+					
 					<li>
-						<label>Fax</label>
+						<label>Mobile Phone</label>
 						<div>
-							<input id="fax" name="fax" type="text" value="" tabindex="9" />
+							<input id="phone" name="phone" type="text" value="xxx-xxx-xxxx" tabindex="7" />
 						</div>
 					</li>
-
 					<li>
 						<label>Email</label>
 						<div>
-							<input id="email" name="email" type="text" value="" tabindex="10" />
+							<input id="email" name="email" type="text" value="MMuni@dadeschools.net" tabindex="10" />
 						</div>
 					</li>
 
